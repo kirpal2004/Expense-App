@@ -1,0 +1,69 @@
+.new-expense {
+    background-color: #8c09e9;
+    /* Light purple background */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    color: aliceblue;
+}
+
+.new-expense__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.new-expense__control {
+    flex: 1;
+    min-width: 10rem;
+}
+
+.new-expense__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.new-expense__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    /* Neutral border */
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.new-expense__control input:focus {
+    outline: none;
+    border-color: #8577ea;
+    /* Light purple */
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.5);
+}
+
+.new-expense__actions {
+    text-align: right;
+}
+
+.new-expense__actions button {
+    background-color: #7f56d6;
+    /* Dark purple */
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-expense__actions button:hover {
+    background-color: #1df65a;
+    /* Lighter purple */
+}

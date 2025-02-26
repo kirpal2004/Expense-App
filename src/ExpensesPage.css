@@ -1,0 +1,258 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #f05f5f;
+    --card-bg: #ffff;
+    --button-bg: #14d2ec;
+}
+
+
+/* Default Light Mode */
+
+.new-expense {
+    background-color: #8c09e9;
+    /* Light purple */
+    color: aliceblue;
+}
+
+.dark-mode input,
+select {
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid #f74a30;
+    border-radius: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.dark-mode .expenses {
+    padding: 1rem;
+    background-color: rgb(24, 24, 90);
+    margin: 2rem auto;
+    width: 50rem;
+    box-shadow: 10px #35bf20;
+    max-width: 95%;
+    border-radius: 12px;
+}
+
+.dark-mode .expense-item h2 {
+    color: #8adcfa;
+}
+
+.dark-mode .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: hsl(200, 92%, 48%);
+}
+
+.dark-mode .new-expense {
+    background-color: #2c2cc6;
+    /* Darker purple */
+    color: white;
+}
+
+
+/* Ensure the drawer is visible in Light Mode */
+
+.light-mode {
+    background-color: #000000 !important;
+    z-index: 1000 !important;
+    color: #0dcdee !important;
+    display: block !important;
+}
+
+.dark-mode .drawer {
+    background-color: #121212;
+    /* Darker shade for Dark Mode */
+    color: #eddddd;
+}
+
+.dark-mode {
+    --bg-color: #0f0e10;
+    --text-color: hwb(140 7% 9%);
+    --card-bg: #111211;
+    --button-bg: #6362b5;
+    --button-hover: red;
+    --button-position: var(--button-position);
+    --button-margin-top: 10px;
+    --card-shadow: var(--text-color);
+}
+
+.dark-mode button :hover {
+    color: #df15d9;
+    background: white;
+    border-radius: 9px;
+}
+
+.dark-mode .expenses .expense-item button:hover {
+    background-color: #35bf20;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 12px 12px;
+    margin-bottom: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Apply Theme to Only the Form andControls */
+
+.form-container {
+    background-color: var(--form-bg);
+    color: var(--form-text);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+/* Buttons */
+
+.form-container button {
+    background-color: purple;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Ensure Expense List Stays the Same */
+
+.expense-list {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+
+/* Global App Container */
+
+.app-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+
+/* Menu Button Styling */
+
+.menu-button {
+    position: relative;
+    top: 1px;
+    right: 5px;
+    color: #4af678;
+}
+
+.drawer {
+    background-color: rgb(13, 11, 11);
+    /* Default light mode */
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Dark mode styles */
+
+.dark-mode .drawer {
+    background-color: #eb2d2d;
+    color: rgb(240, 113, 113);
+}
+
+.drawer-content {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    color: rgb(15, 183, 183);
+}
+
+.drawer-content h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* Date Picker Box */
+
+.date-picker,
+.month-picker {
+    margin: 20px 0;
+    padding: 10px;
+    background: #9e37e8;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    box-sizing: content-box;
+}
+
+.date-picker label,
+.month-picker label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.date-picker input,
+.month-picker input {
+    border: 2px solid #44a7dd;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.date-picker input:focus,
+.month-picker input:focus {
+    border-color: #822ef0;
+}
+
+
+/* Total Expense Display */
+
+.total-expense {
+    margin: 20px auto;
+    font-size: 20px;
+    background: #6b14bdc9;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 18px;
+    display: inline-block;
+    box-shadow: 5px 4px 8px rgba(116, 247, 50, 0.2);
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .date-picker input,
+    .month-picker input {
+        width: 100%;
+    }
+    .total-expense {
+        font-size: 18px;
+        width: 100%;
+    }
+}
