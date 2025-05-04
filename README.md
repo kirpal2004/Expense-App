@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+💸 Expense Tracker App
+A simple and user-friendly Expense Management Web App to track daily spending. Built with React.js for the frontend, PHP & MySQL (XAMPP) for the backend, and Firebase for Google Sign-In.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Tech Stack
+| Frontend | Backend | Database      | Authentication          |
+| React.js | PHP     | MySQL (XAMPP) | Firebase Google Sign-In |
 
-## Available Scripts
+✨ Features
+🔐 Google Login using Firebase
 
-In the project directory, you can run:
+➕ Add Expenses (Title, Amount, Date)
 
-### `npm start`
+🧾 View Expense List with dates and amounts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔍 Search & Sort expenses easily
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📅 Filter by specific date or by month
 
-### `npm test`
+🌗 Dark Mode Toggle
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+❌ Delete expense entries
 
-### `npm run build`
+🧠 System Architecture – Expense Tracker Web App
+                          ┌────────────────────┐
+                          │    User (Browser)  │
+                          └────────┬───────────┘
+                                   │
+                                   ▼
+                      ┌──────────────────────────┐
+                      │     React.js Frontend    │
+                      │                          │
+                      │ - Displays UI            │
+                      │ - Sends form data        │
+                      │ - Fetches expense data   │
+                      └────────┬─────────────────┘
+                               │
+                               ▼
+                      ┌──────────────────────────┐
+                      │     PHP Backend (API)    │
+                      │                          │
+                      │ - Handles POST/GET/DEL   │
+                      │ - Communicates with DB   │
+                      └────────┬─────────────────┘
+                               │
+                               ▼
+                  ┌──────────────────────────────┐
+                  │       MySQL Database         │
+                  │         (XAMPP)              │
+                  │ ┌──────────────────────────┐ │
+                  │ │  expenses (table)        │ │
+                  │ │  - id                    │ │
+                  │ │  - title                 │ │
+                  │ │  - price                 │ │
+                  │ │  - date                  │ │
+                  │ └──────────────────────────┘ │
+                  └──────────────────────────────┘
+                               ▲
+                               │
+                  ┌──────────────────────────────┐
+                  │ Firebase (Google Login Auth) │
+                  │ - Provides OAuth tokens      │
+                  │ - React uses it for user     │
+                  │   authentication             │
+                  └──────────────────────────────┘
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Key Flows:
+✅ Login: User logs in via Google → Firebase Auth → Token saved in frontend.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📤 Add Expense: React sends expense data to PHP via POST.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📥 Get Expense: React fetches expenses via GET from PHP.
 
-### `npm run eject`
+🗑️ Delete Expense: React triggers a DELETE request to PHP.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+💾 PHP handles DB operations and interacts with the expenses table in MySQL.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔐 Authentication (Firebase)
+Uses Google Sign-In
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User's email is stored in MySQL along with expenses
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Logout button on dashboard
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🖼️ Screenshots
+🔐 Login Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📋 Expense Form + Dashboard
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📆 Date & Month Filter
