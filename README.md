@@ -20,48 +20,6 @@ A simple and user-friendly Expense Management Web App to track daily spending. B
 
 ❌ Delete expense entries
 
-🧠 System Architecture – Expense Tracker Web App
-                          ┌────────────────────┐
-                          │    User (Browser)  │
-                          └────────┬───────────┘
-                                   │
-                                   ▼
-                      ┌──────────────────────────┐
-                      │     React.js Frontend    │
-                      │                          │
-                      │ - Displays UI            │
-                      │ - Sends form data        │
-                      │ - Fetches expense data   │
-                      └────────┬─────────────────┘
-                               │
-                               ▼
-                      ┌──────────────────────────┐
-                      │     PHP Backend (API)    │
-                      │                          │
-                      │ - Handles POST/GET/DEL   │
-                      │ - Communicates with DB   │
-                      └────────┬─────────────────┘
-                               │
-                               ▼
-                  ┌──────────────────────────────┐
-                  │       MySQL Database         │
-                  │         (XAMPP)              │
-                  │ ┌──────────────────────────┐ │
-                  │ │  expenses (table)        │ │
-                  │ │  - id                    │ │
-                  │ │  - title                 │ │
-                  │ │  - price                 │ │
-                  │ │  - date                  │ │
-                  │ └──────────────────────────┘ │
-                  └──────────────────────────────┘
-                               ▲
-                               │
-                  ┌──────────────────────────────┐
-                  │ Firebase (Google Login Auth) │
-                  │ - Provides OAuth tokens      │
-                  │ - React uses it for user     │
-                  │   authentication             │
-                  └──────────────────────────────┘
 
 Key Flows:
 ✅ Login: User logs in via Google → Firebase Auth → Token saved in frontend.
@@ -83,6 +41,18 @@ Logout button on dashboard
 
 
 🖼️ Screenshots
+
+![authentication](https://github.com/user-attachments/assets/0b8cbdcd-2d4e-406d-9684-821ca5eb3e9b)
+
+Lightmode
+![lightmode](https://github.com/user-attachments/assets/84fd5373-27a2-4c20-943e-1433014087d0)
+
+Darkmode
+![darkmode](https://github.com/user-attachments/assets/c1a7b8ef-8b4d-49fc-b0a3-39616e6afe83)
+
+Dropdown Menu
+![dropdown](https://github.com/user-attachments/assets/9d3fa549-fdff-4fb2-b2eb-65ff7bfabb93)
+
 🔐 Login Page
 
 📋 Expense Form + Dashboard
